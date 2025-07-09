@@ -1,0 +1,474 @@
+/* CAR DETAILS FORM - Dark/Neon Luxe Apple/Richard Mille Minimalist */
+/* -- Modernized accent classes for extra polish -- */
+/* Removed all legacy neon-accent, neon-gold, neon-premium-btn classes - now handled inline/muted */
+.modern-car-form { padding-bottom: 30px !important; }
+.modern-form-group { margin-bottom: 0 !important; }
+.ts-car-form-fields-container { display: flex; flex-wrap: wrap; gap: 3vw 4vw; justify-content: flex-start; align-items: flex-end; width: 100%; }
+.modern-car-form-row { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: flex-start; gap: 2vw 50px; margin-top: 66px; }
+@media (max-width: 1100px) {
+  .ts-car-form-fields-container, .modern-car-form-row {
+    flex-direction: column;
+    gap: 14px;
+    align-items: stretch;
+  }
+}
+
+.ts-car-input-form {
+  --form-dark-bg: #16161c;
+  --form-dark-grad: linear-gradient(128deg, #18181f 74%, #101019 100%);
+  --form-card-shadow: 0 9px 32px 7px #18181c44, 0 2px 11px #b4081b14, 0 1.5px 13px #23253f12;
+  --form-border: 2.1px solid #292933;
+  --input-border-radius: 18px;
+  --input-bg: #19181b;
+  --input-border: 2px solid #262627;
+  --input-text: #edeef0;
+  --input-highlight: #b4081b;
+  --label-text: #edeef0;
+  --label-text-secondary: #a9aaae;
+  --label-bold: 800;
+  --btn-bg-grad: linear-gradient(98deg, #292933 38%, #7d7d85 96%);
+  --btn-hover: #222226;
+  --box-radius: 21px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  background: var(--form-dark-grad);
+  border-radius: var(--box-radius);
+  box-shadow: var(--form-card-shadow);
+  padding: 54px 36px 28px 36px;
+  margin-bottom: 31px;
+  margin-top: 17px;
+  position: relative;
+  border: var(--form-border);
+  min-width: 0;
+  gap: 31px 21px;
+  max-width: 900px;
+  width: 97%;
+  justify-content: flex-start;
+  transition: box-shadow 0.21s, border 0.17s, background 0.12s;
+  filter: brightness(1.03);
+}
+.ts-car-input-form.ts-premium {
+  background: linear-gradient(123deg, #18181b 81%, #232327 100%);
+  box-shadow: 0 7px 32px 7px #18181c44, 0 2px 9px #b4081b14, 0 1.5px 11px #23253f12;
+  border-radius: var(--box-radius);
+  border: 2.1px solid #b4081b33;
+  filter: brightness(1.05) blur(.00px);
+}
+@media (max-width: 950px) {
+  .ts-car-input-form {
+    flex-direction: column;
+    padding: 30px 6vw 22px 6vw;
+    gap: 27px;
+    border-radius: 24px;
+    width: 100%;
+    max-width: 99vw;
+  }
+}
+@media (max-width: 700px) {
+  .ts-car-input-form {
+    padding: 16px 2vw 12px 3vw;
+    gap: 15px;
+    border-radius: 12px;
+    margin-bottom: 21px;
+  }
+}
+
+/* Instruction block above form fields */
+.ts-car-input-instruction {
+  background: linear-gradient(114deg, #232327 64%, #18181b 103%);
+  border-radius: 18px;
+  color: #edeef0;
+  font-weight: 700;
+  font-size: 1.06rem;
+  margin-bottom: 14px;
+  margin-top: -7px;
+  padding: 19px 23px 14px 20px;
+  box-shadow: 0 7px 19px #18181c32, 0 2px 12px #b4081b24;
+  max-width: 650px;
+  letter-spacing: 0.024em;
+  text-align: left;
+  border: 1.7px solid #2f2f33;
+  position: relative;
+  filter: none;
+  z-index: 2;
+  transition: box-shadow .19s cubic-bezier(.74,0,.25,1);
+  overflow: visible;
+}
+.ts-car-input-instruction-title {
+  font-weight: 950;
+  font-size: 1.32em;
+  letter-spacing: 0.07em;
+  display: block;
+  margin-bottom: 7px;
+  text-shadow: none;
+  font-family: inherit;
+  filter: brightness(1.07);
+}
+.ts-car-input-instruction-desc {
+  display: block;
+  margin-top: 10px;
+  font-weight: 450;
+  font-size: 1.07em;
+  color: #fff7;
+  letter-spacing: 0.03em;
+  filter: brightness(1.09);
+  font-family: inherit;
+}
+
+/* Remove fieldset border/spacing for grouped fields */
+.ts-car-input-form fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+
+/* Main field group styling: ample whitespace, minimalist */
+.ts-car-form-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 260px;
+  min-width: 190px;
+  margin-top: 96px;
+  margin-bottom: 0;
+  padding: 0 17px 0 12px;
+  position: relative;
+  background: none;
+  border: none;
+}
+@media (max-width: 600px) {
+  .ts-car-form-group {
+    margin-top: 38px;
+    min-width: 0;
+    padding: 0 0 0 1px;
+  }
+}
+
+/* Bold, upscale FIELD LABEL styling (Apple/Luxe) */
+.ts-car-form-group label,
+.modern-form-group label,
+.car-label-title {
+  font-weight: 700;
+  color: var(--label-text);
+  font-size: 1.23rem;
+  margin-bottom: 7px;
+  letter-spacing: 0.09em;
+  display: block;
+  margin-left: 0;
+  text-shadow: none;
+  /* Use Roboto globally, drop system stack to avoid overrides */
+  font-family: 'Roboto', Helvetica, Arial, sans-serif !important;
+  filter: none;
+  line-height: 1.15;
+  transition: color 0.14s, text-shadow .15s, filter .11s;
+}
+
+/* Highlight sub-label (brand) */
+.ts-car-form-group .ts-label-sub {
+  color: var(--label-text-secondary);
+  opacity: 0.63;
+  font-weight: 460;
+  font-size: 0.99em;
+  margin-left: 9px;
+  letter-spacing: 0.01em;
+  text-shadow: none;
+  filter: brightness(1.07);
+  font-family: inherit;
+}
+.ts-car-form-group .ts-label-instruction {
+  color: #7d7d85;
+  font-size: 1.01em;
+  margin-top: 7px;
+  font-weight: 500;
+  opacity: 0.92;
+  letter-spacing: 0.009em;
+  filter: brightness(1.04);
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+/* Neon minimal inputs and selects - modern, strong visual focus */
+.ts-car-form-group .ts-input,
+.ts-car-form-group select,
+.modern-form-group .ts-input,
+.modern-form-group select {
+  border-radius: var(--input-border-radius);
+  border: var(--input-border);
+  margin-bottom: 3.3px;
+  font-weight: 700;
+  font-size: 1.09rem;
+  background: var(--input-bg);
+  color: var(--input-text);
+  padding: 14px 20px 14px 18px;
+  margin-top: 8.5px;
+  width: 100%;
+  min-height: 45px;
+  outline: none;
+  box-shadow: none;
+  transition: border 0.18s, box-shadow 0.11s, background 0.13s, filter 0.10s;
+  appearance: none;
+  letter-spacing: 0.025em;
+  /* Use Roboto globally, drop system stack */
+  font-family: 'Roboto', Helvetica, Arial, sans-serif !important;
+  filter: none;
+}
+.ts-car-form-group .ts-input:focus,
+.ts-car-form-group select:focus,
+.modern-form-group .ts-input:focus,
+.modern-form-group select:focus {
+  border: 2.2px solid #b4081b;
+  background: #232327;
+  box-shadow: 0 0 11px #b4081b41;
+  filter: brightness(1.05);
+  color: #edeef0;
+  z-index: 5;
+}
+
+/* Placeholders neon & subtle underline/minimalist */
+.ts-car-form-group .ts-input::placeholder {
+  color: #a9aaae;
+  opacity: 1;
+  font-weight: 400;
+  letter-spacing: 0.015em;
+  font-family: inherit;
+  filter: none;
+  text-shadow: none;
+  font-size: 1em;
+}
+
+/* Info note under input/select */
+.ts-car-form-group .ts-label-note {
+  display: block;
+  color: #7d7d85;
+  font-size: 0.96em;
+  margin-top: 5px;
+  font-weight: 450;
+  opacity: 0.79;
+  padding-bottom: 2px;
+  filter: none;
+  font-family: inherit;
+}
+
+/* Submit Button - bold, neon gradient, soft shadow */
+.ts-car-form-submit {
+  flex: 0 1 180px;
+  align-self: center;
+  margin-top: 96px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-width: 135px;
+  padding: 0;
+}
+.ts-car-form-submit .btn,
+.ts-car-form-submit .neon-premium-btn,
+.modern-form-submit .btn,
+.modern-form-submit .neon-premium-btn {
+  background: #232327;
+  color: #edeef0;
+  font-weight: 700;
+  border-radius: 18px;
+  padding: 15px 45px;
+  box-shadow: none;
+  min-width: 110px;
+  min-height: 46px;
+  font-size: 1.13rem;
+  letter-spacing: 0.025em;
+  border: 1.4px solid #2f2f33;
+  outline: none;
+  transition: background 0.18s, box-shadow 0.13s, filter 0.08s, color 0.10s;
+  font-family: inherit;
+  filter: none;
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.ts-car-form-submit .btn:hover,
+.ts-car-form-submit .btn:focus,
+.ts-car-form-submit .neon-premium-btn:hover,
+.ts-car-form-submit .neon-premium-btn:focus,
+.modern-form-submit .btn:hover,
+.modern-form-submit .btn:focus,
+.modern-form-submit .neon-premium-btn:hover,
+.modern-form-submit .neon-premium-btn:focus {
+  filter: none;
+  background: #18181b;
+  box-shadow: 0 3px 17px #b4081b40;
+  color: #b4081b;
+  outline: 1.2px solid #b4081b;
+  outline-offset: 2px;
+}
+
+/* Car image preview block - bold, clean container, vivid placeholder bg */
+.ts-car-img-preview {
+  flex: 0 0 128px;
+  margin-left: 34px;
+  align-self: center;
+  position: relative;
+  margin-top: 64px;
+  z-index: 0;
+}
+@media (max-width: 950px) {
+  .ts-car-img-preview {
+    margin-left: 0;
+    margin-top: 27px;
+  }
+}
+.ts-car-img-preview-box,
+.modern-img-preview-box {
+  width: 139px;
+  height: 86px;
+  border-radius: 11px;
+  background: #232327;
+  box-shadow: 0 7px 21px #1b1b2555;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  border: 1.4px solid #2f2f33;
+  backdrop-filter: blur(1.5px) brightness(1.05);
+  transition: box-shadow 0.13s, border 0.13s;
+}
+.ts-car-img-preview-box img,
+.modern-img-preview-box img {
+  width: 133px;
+  height: 81px;
+  object-fit: cover;
+  border-radius: 10px;
+  filter: brightness(1.08);
+  background: #19181b;
+  user-select: none;
+  pointer-events: none;
+  display: block;
+  transition: filter 0.12s, box-shadow 0.11s;
+}
+.ts-car-img-preview-label,
+.modern-preview-label {
+  color: #7d7d85;
+  font-size: 1.06em;
+  text-align: center;
+  margin-top: 13px;
+  display: block;
+  font-weight: 500;
+  letter-spacing: 0.07em;
+  text-shadow: none;
+  filter: none;
+}
+.ts-car-img-loading,
+.ts-car-img-preview span {
+  color: #7d7d85;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.07rem;
+  padding: 9px;
+  opacity: 0.94;
+  letter-spacing: 0.06em;
+  text-shadow: none;
+}
+
+@media (max-width: 550px) {
+  .ts-car-input-form,
+  .ts-car-input-form.ts-premium {
+    padding: 16px 3vw 13px 3vw;
+    gap: 11px;
+    border-radius: 13px;
+    width: 100%;
+    margin-bottom: 19px;
+    margin-top: 10px;
+  }
+  .ts-car-form-group {
+    margin-top: 21px !important;
+    padding: 0 1px 0 1.5px;
+    min-width: 0;
+  }
+  .ts-car-img-preview {
+    margin-left: 0;
+    margin-top: 13px;
+  }
+}
+
+/* --- Porsche minimal car summary block --- */
+.car-details-minimal-summary {
+  background: #edeef0;
+  border-radius: 17px;
+  border: 1.5px solid #cfd2d6;
+  padding: 22px 36px 17px 26px;
+  margin: 24px 0 0 0;
+  box-shadow: 0 9px 35px #cfd2d63a, 0 1.5px 10px #11111409;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 32px;
+  min-height: 86px;
+  max-width: 510px;
+  font-family: 'Inter','Helvetica Neue',Arial,sans-serif;
+  animation: fadeinMinimalSummary 0.33s ease;
+}
+
+@keyframes fadeinMinimalSummary {
+  from { opacity: 0; transform: translateY(14px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+.car-details-minimal-summary img {
+  width: 71px;
+  height: 49px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #19181b;
+  display: block;
+}
+
+.car-details-minimal-summary .car-details-summary-title {
+  font-size: 1.26rem;
+  font-weight: 800;
+  color: #111216;
+  margin-bottom: 4px;
+  letter-spacing: 0.06em;
+  text-transform: none;
+}
+
+.car-details-minimal-summary .car-details-summary-year {
+  color: #5d6266;
+  font-size: 1.02em;
+  margin-left: 10px;
+  font-weight: 700;
+  opacity: 0.83;
+}
+
+.car-details-minimal-summary .car-details-summary-model {
+  color: #b4081b;
+  font-weight: 900;
+  font-size: 1.13em;
+  letter-spacing: 0.095em;
+  margin-left: 3px;
+}
+
+.car-details-minimal-summary .car-details-summary-desc {
+  color: #7d7d85;
+  font-weight: 450;
+  font-size: 1.01em;
+  margin-top: 1px;
+  letter-spacing: 0.025em;
+  text-shadow: none;
+}
+
+/* Responsive stacking for summary block */
+@media (max-width: 650px) {
+  .car-details-minimal-summary {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 17px 14px 14px 13px;
+    max-width: 99vw;
+    min-width: 0;
+  }
+  .car-details-minimal-summary img {
+    width: 58px;
+    height: 36px;
+  }
+}
+

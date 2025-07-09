@@ -1,0 +1,147 @@
+:root {
+  --base-light: #00fff2;
+  --base-dark: #18181f;
+  --neon-yellow: #ffe600;
+  --neon-accent: #00fff9;
+  --neon-pink: #fb01ff;
+  --text-color: #fff;
+  --text-secondary: rgba(255,255,255,0.6);
+  --border-color: rgba(255,255,255,0.11);
+
+  /* Set Roboto as the main font globally */
+  font-family: 'Roboto', Helvetica, Arial, sans-serif !important;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', Helvetica, Arial, sans-serif !important;
+  background-color: var(--base-dark);
+  color: var(--text-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Blackout overlay for staged intro - covers all content initially */
+.blackout-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #08080B;
+  opacity: 1;
+  z-index: 2000;
+  pointer-events: all;
+  will-change: opacity;
+  transition: opacity 540ms cubic-bezier(.71,0,.38,1);
+}
+
+/* Logo navbar mini style */
+.ts-animated-car-navbar {
+  max-width: 350px;
+  min-width: 165px;
+  height: 63px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  z-index: 12;
+}
+
+.ts-animated-car-navbar .ts-animated-car-title {
+  font-size: 1.6rem !important;
+  color: #ffe600 !important;
+  text-shadow: 0 0 11px #ffe6006c;
+  letter-spacing: 0.11em;
+  line-height: 1.1;
+}
+
+.navbar {
+  background-color: var(--base-dark);
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border-color);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-symbol {
+  color: var(--base-light);
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.hero {
+  padding-top: 120px;
+  padding-bottom: 64px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.subtitle {
+  color: var(--base-light);
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin-bottom: 16px;
+}
+
+.btn {
+  background-color: var(--base-light);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #7691ff;
+}
+
+.btn-large {
+  padding: 12px 24px;
+  font-size: 1.1rem;
+}
